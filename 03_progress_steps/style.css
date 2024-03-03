@@ -1,5 +1,12 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --line-border-fill: #3498db;
+    --line-border-empty: #383838;
 }
 
 body {
@@ -7,16 +14,44 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
+    margin: 0;
 }
 
 .container {
     width: 50vw;
-    align-items: center;
+    text-align: center;
 }
 
 .progress-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    /* width: 350px; */
+    align-items: center;
+
+    margin-bottom: 30px;
     max-width: 100%;
+}
+
+.progress {
+    /* content: ""; */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    height: 4px;
+    background-color: #3498db;
+    z-index: -1;
+}
+
+.circle {
+    background-color: aliceblue;
+    border: 3px solid #3498db;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
