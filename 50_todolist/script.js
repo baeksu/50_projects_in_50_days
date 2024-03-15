@@ -12,7 +12,8 @@ function addTodo() {
 
     if (todoText) {
         const todoEl = document.createElement("li");
-        todoEl.value = todoText;
-        todosUl.appendChild();
+        todoEl.textContent = todoText;
+        todosUl.appendChild(todoEl);
+        console.log(todoEl.value);
     }
 }
