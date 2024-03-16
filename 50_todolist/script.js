@@ -14,6 +14,5 @@ function addTodo() {
         const todoEl = document.createElement("li");
         todoEl.textContent = todoText;
         todosUl.appendChild(todoEl);
-        console.log(todoEl.value);
     }
 }
