@@ -12,7 +12,15 @@ function addTodo() {
 
     if (todoText) {
         const todoEl = document.createElement("li");
-        todoEl.textContent = todoText;
+        todoEl.innerText = todoText;
+        todoEl.addEventListener("click", (e) => {
+            todoEl.classList.toggle("completed");
+        });
+        todoEl.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+            todoEl.remove();
+        });
         todosUl.appendChild(todoEl);
+        input.value = "";
     }
 }
